@@ -13,7 +13,7 @@ const SignInForm = () => {
     e.preventDefault();
     try {
       // Send sign-in request to backend
-      const response = await axios.post('http://localhost:5000/signin', {
+      const response = await axios.post('https://meal-app-client.vercel.app/signin', {
         email,
         password,
       });
