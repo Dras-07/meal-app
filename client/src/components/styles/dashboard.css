@@ -1,0 +1,83 @@
+/* styles/dashboard.css */
+
+/* Container */
+.dashboard {
+  padding: 20px;
+  padding-top: 0;
+  border-radius: 10px;
+  width: 100%;
+  background-color: white;
+}
+
+
+.dashboard h1{
+  text-align: center;
+  margin-top: 0; /* Add this to remove default margin */
+  color: #f99185;
+}
+
+/* Sign-out button */
+.sign-out-button {
+  text-align: right;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.sign-out-button button {
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  color: white;
+}
+
+/* Page title */
+.dashboard h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.dashboard h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Day cards container */
+.day-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Individual day card */
+.day-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  margin-bottom: 20px;
+  width: calc(14.28% - 20px);
+  width: 170px;
+  text-align: center;
+  margin-left:60px;
+}
+
+/* Button styling */
+.day-card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.day-card button:hover {
+  background-color: white;
+  color: #ff8177;
+}

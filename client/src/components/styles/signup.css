@@ -1,0 +1,56 @@
+/* signup.css */
+.form-container {
+  max-width: 350px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center items horizontally and vertically */
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button[type="submit"] {
+  width: 100%;
+  max-width: 200px; /* Adjust the max-width as needed */
+  padding: 10px;
+  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  color: #fff;
+  border: none;
+  margin-left: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container p {
+  margin-top: 20px;
+}
+
+.form-container p a {
+  color: #f99185;
+  text-decoration: none;
+}
+
+.form-container p a:hover {
+  text-decoration: underline;
+}

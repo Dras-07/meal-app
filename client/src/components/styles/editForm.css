@@ -1,0 +1,60 @@
+/* styles/editForm.css */
+
+/* Edit form container */
+.edit-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+  
+  /* Edit form title */
+  .edit-form h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form fields */
+  .edit-form label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .edit-form input[type="text"],
+  .edit-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Ingredients section */
+  .edit-form h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .edit-form button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-form button[type="button"]:hover,
+  .edit-form button[type="submit"]:hover {
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+  

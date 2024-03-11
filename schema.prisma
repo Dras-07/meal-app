@@ -1,0 +1,52 @@
+// prisma/schema.prisma
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://postgres.wnabcnsdmnxybzgpggqh:Markgoldbridge@123@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Define the Supabase user authentication table
+model SupabaseAuthUser {
+  id       String    @id @map(name: "id")
+  email    String?   @unique
+  // Add other fields as needed such as name, phone number, etc.
+  meals    Meal[]
+}
+
+model Meal {
+  id           Int          @id @default(autoincrement())
+  name         String
+  description  String
+  imageUrl     String
+  day          String
+  userId       String       // Add a userId field to associate the meal with the user who created it
+  user         SupabaseAuthUser @relation(fields: [userId], references: [id]) // Add a relation to the SupabaseAuthUser model
+  ingredients  Ingredient[] @relation("MealToIngredient")
+  // Add opposite relation field
+  ingredientLinks MealToIngredient[]
+}
+
+model Ingredient {
+  id      Int     @id @default(autoincrement())
+  name    String
+  meals   Meal[]  @relation("MealToIngredient")
+  // Add opposite relation field
+  mealLinks MealToIngredient[]
+}
+
+// Define the many-to-many relationship table
+model MealToIngredient {
+  mealId      Int
+  ingredientId Int
+
+  // Define foreign keys
+  meal        Meal        @relation(fields: [mealId], references: [id])
+  ingredient  Ingredient  @relation(fields: [ingredientId], references: [id])
+
+  // Define primary key
+  @@id([mealId, ingredientId])
+}

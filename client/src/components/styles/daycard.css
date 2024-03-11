@@ -1,0 +1,19 @@
+/* styles/daycard.css */
+
+.day-card {
+    padding: 20px;
+    border-radius: 8px;
+    color: blueviolet;
+    font-size:2px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    text-align: center;
+  }
+  
+  .day-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Add more styling rules as needed */
+  
