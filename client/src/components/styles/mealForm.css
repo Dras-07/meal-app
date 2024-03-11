@@ -1,28 +1,24 @@
-/* styles/mealForm.css */
 
-/* Meal form container */
 .meal-form {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 20%;
     transform: translate(-50%, -50%);
-    z-index: 9999; /* Ensure the MealForm appears above other elements */
+    z-index: 9999; 
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 50px;
-    backdrop-filter: blur(5px); /* Apply blur effect to content behind the MealForm */
+    backdrop-filter: blur(5px); 
   }
   
-  /* Heading */
   .meal-form h2 {
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px;
   }
   
-  /* Form fields */
   .meal-form label {
     font-weight: bold;
     color: #333;
@@ -38,7 +34,6 @@
     border-radius: 5px;
   }
   
-  /* Ingredients list */
   .meal-form ul {
     list-style-type: none;
     padding: 0;
@@ -59,7 +54,6 @@
     cursor: pointer;
   }
   
-  /* Submit and close buttons */
   .meal-form button[type="submit"],
   .meal-form button[type="button"] {
     padding: 10px 20px;

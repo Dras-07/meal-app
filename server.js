@@ -6,12 +6,10 @@ const port = 5000;
 const baseUrl = 'https://meal-app-client.vercel.app';
 const cors = require('cors');
 
-app.use(cors({ origin: 'https://meal-app-client.vercel.app' })); // Allow requests from meal-app-client.vercel.app
+app.use(cors()); 
 
-// Middleware
-app.use(express.json()); // Parse JSON bodies
+app.use(express.json()); 
 
-// Use user routes
 app.use('/', userRoutes);
 app.use('/', mealRoutes);
 
@@ -19,7 +17,6 @@ app.use('/', mealRoutes);
 app.get('/', function(req, res){
     res.sendStatus(201);
 })
-// Start the server
 app.listen(port, () => {
 
     console.log(`Server is listening on port ${port}`);

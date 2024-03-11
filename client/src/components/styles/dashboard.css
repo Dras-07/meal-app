@@ -1,6 +1,4 @@
-/* styles/dashboard.css */
 
-/* Container */
 .dashboard {
   padding: 20px;
   padding-top: 0;
@@ -12,11 +10,10 @@
 
 .dashboard h1{
   text-align: center;
-  margin-top: 0; /* Add this to remove default margin */
+  margin-top: 0; 
   color: #f99185;
 }
 
-/* Sign-out button */
 .sign-out-button {
   text-align: right;
   position: absolute;
@@ -32,7 +29,6 @@
   color: white;
 }
 
-/* Page title */
 .dashboard h1 {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -42,14 +38,12 @@
   color: white;
 }
 
-/* Day cards container */
 .day-cards {
   display: flex;
   flex-wrap: wrap;
   margin-top: 40px;
 }
 
-/* Individual day card */
 .day-card {
   background-color: white;
   border-radius: 10px;
@@ -63,7 +57,6 @@
   margin-left:60px;
 }
 
-/* Button styling */
 .day-card button {
   margin-top: 10px;
   padding: 10px 20px;

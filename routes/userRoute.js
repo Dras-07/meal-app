@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const { signUpUser, signInUser, signOutUser } = require('../authentication');
 
-// Sign-up route
 router.post('/signup', async (req, res) => {
     const { email, password,username } = req.body;
     try {
@@ -13,7 +12,6 @@ router.post('/signup', async (req, res) => {
     }
 });
 
-// Sign-in route
 router.post('/signin', async (req, res) => {
     const { email, password } = req.body;
     try {
@@ -24,7 +22,6 @@ router.post('/signin', async (req, res) => {
     }
 });
 
-// Sign-out route
 router.get('/signout', async (req, res) => {
     try {
         await signOutUser();

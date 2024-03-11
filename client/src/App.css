@@ -1,8 +1,7 @@
-/* src/styles/app.css */
 
 .app-container {
-  max-width: 600px; /* Set the maximum width of the app container */
-  margin: 0 auto; /* Center the app container horizontally */
-  padding: 20px; /* Add padding to the app container */
-  font-family: Arial, sans-serif; /* Set the font family for the app */
+  max-width: 600px;
+  margin: 0 auto; 
+  padding: 20px;
+  font-family: Arial, sans-serif; 
 }

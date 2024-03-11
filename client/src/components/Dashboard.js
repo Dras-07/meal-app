@@ -10,13 +10,13 @@ const Dashboard = () => {
   const [showMealForm, setShowMealForm] = useState(false);
   const [showViewMealsModal, setShowViewMealsModal] = useState(false);
   const [selectedDay, setSelectedDay] = useState(null);
-  const [mealAdded, setMealAdded] = useState(false); // New state to track if meal was added
+  const [mealAdded, setMealAdded] = useState(false); 
   const [sessionToken, setSessionToken] = useState('');
   const [userId, setUserId] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Retrieve session token from localStorage
+   
     const token = localStorage.getItem('accessToken');
     const userId = localStorage.getItem('userId');
     setUserId(userId);
@@ -26,7 +26,7 @@ const Dashboard = () => {
     else{
       navigate('/signin');
     }
-  }, []); // Empty
+  }, []); 
 
   const handleAddMeal = (day) => {
     setShowMealForm(true);
@@ -41,7 +41,7 @@ const Dashboard = () => {
   const handleCloseMealForm = () => {
     setShowMealForm(false);
     setSelectedDay(null);
-    setMealAdded(true); // Set mealAdded state to true after adding a meal
+    setMealAdded(true); 
   };
 
   const handleCloseViewMealsModal = () => {
@@ -50,25 +50,18 @@ const Dashboard = () => {
   };
 
   const handleSignOut = async () => {
-    // Clear local storage
 
     try {
-      // Call the server-side signout endpoint
-      // await axios.get('http://localhost:5000/signout');
-
-      // Clear local storage
+    
       localStorage.removeItem('accessToken');
       localStorage.removeItem('userId');
 
-      // Redirect to the sign-in page
       navigate('/signin');
   } catch (error) {
       console.error('Error signing out:', error);
-      // Handle error
   }
   };
 
-  // return // Inside the return statement of Dashboard component
   return (
     <div className="dashboard">
       <div className="sign-out-button">

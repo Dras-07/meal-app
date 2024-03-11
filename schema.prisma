@@ -9,11 +9,9 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// Define the Supabase user authentication table
 model SupabaseAuthUser {
   id       String    @id @map(name: "id")
   email    String?   @unique
-  // Add other fields as needed such as name, phone number, etc.
   meals    Meal[]
 }
 
@@ -23,10 +21,10 @@ model Meal {
   description  String
   imageUrl     String
   day          String
-  userId       String       // Add a userId field to associate the meal with the user who created it
-  user         SupabaseAuthUser @relation(fields: [userId], references: [id]) // Add a relation to the SupabaseAuthUser model
+  userId       String      
+  user         SupabaseAuthUser @relation(fields: [userId], references: [id])
   ingredients  Ingredient[] @relation("MealToIngredient")
-  // Add opposite relation field
+  
   ingredientLinks MealToIngredient[]
 }
 
@@ -38,15 +36,12 @@ model Ingredient {
   mealLinks MealToIngredient[]
 }
 
-// Define the many-to-many relationship table
 model MealToIngredient {
   mealId      Int
   ingredientId Int
 
-  // Define foreign keys
   meal        Meal        @relation(fields: [mealId], references: [id])
   ingredient  Ingredient  @relation(fields: [ingredientId], references: [id])
 
-  // Define primary key
   @@id([mealId, ingredientId])
 }

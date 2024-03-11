@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link component
+import { Link } from 'react-router-dom'; 
 import axios from 'axios';
-import './styles/signup.css'; // Import signup.css
+import './styles/signup.css'; 
 
 const Signup = () => {
   const [email, setEmail] = useState('');
@@ -12,17 +12,15 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Send sign-up request to backend
-      const response = await axios.post('https://meal-app-client.vercel.app/signup', {
+      const response = await axios.post('http://localhost:5000/signup', {
         email,
         password,
         username
       });
 
-      // If sign-up is successful, handle the response accordingly
-      console.log(response.data); // Log response from backend
+      console.log(response.data); 
     } catch (error) {
-      setError(error.message); // Set error state if request fails
+      setError(error.message); 
     }
   };
 
@@ -43,7 +41,6 @@ const Signup = () => {
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
       </div>
       <button type="submit">Sign Up</button>
-      {/* Link to login page */}
       <p>Already registered? <Link to="/signin">Login</Link></p>
     </form>
   );
