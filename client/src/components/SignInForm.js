@@ -38,7 +38,7 @@ const SignInForm = () => {
   return (
     <form onSubmit={handleSubmit} className="form-container">
       <h2>Sign In</h2>
-      {error && <p>{error}</p>}
+      {error && <p>Invalid Credentials</p>}
       <div>
         <label>Email:</label>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
